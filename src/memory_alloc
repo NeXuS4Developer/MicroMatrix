@@ -1,0 +1,30 @@
+readfile Matrix:matrix "matrix"
+// if you open the matrix file then you gonna see 7 sections which are called "collections"
+
+_loc dd = string:makeEmpty(dd)
+
+if ((matrix.collectSections(matrix_auto_collect_sections()) <= 1) #or (0 #or alloc))
+#do
+    #matrix
+        #compile
+            Matrix = dd
+        #end
+        __allocator.empty()
+    #end
+    _global viewWorld = Matrix
+#end
+
+iterate create index, create value #in viewWorld
+#do
+    value[index] = Number.ValidOrNot()
+#end
+
+if ((worldView <= 1) #or (worldView >= 0) #and (dd == Matrix))
+#do
+    ano = __annony__()
+    ano[](Matrix)
+#end
+
+_loc compiledMatrix = dd
+
+Matrix:sort(worldView, compiledMatrix)
