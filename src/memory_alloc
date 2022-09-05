@@ -1,18 +1,18 @@
 // memory allocations
-readfile Matrix:matrix "matrix"
+readfile Matrices:matrix "matrices"
 // if you open the matrix file then you gonna see 7 sections which are called "collections"
 
 _loc dd = string:makeEmpty(dd)
 
-if ((matrix.collectSections(matrix_auto_collect_sections()) <= 1) #or (0 #or alloc))
+if ((Matrices.collectSections(matrix_auto_collect_sections()) <= 1) #or (0 #or alloc))
 #do
     #matrix
         #compile
-            Matrix = dd
+            Matrices = dd
         #end
         __allocator.empty()
     #end
-    _global viewWorld = Matrix
+    _global viewWorld = Matrices
 #end
 
 iterate create index, create value #in viewWorld
@@ -20,12 +20,12 @@ iterate create index, create value #in viewWorld
     value[index] = Number.ValidOrNot()
 #end
 
-if ((worldView <= 1) #or (worldView >= 0) #and (dd == Matrix))
+if ((worldView <= 1) #or (worldView >= 0) #and (dd == Matrices))
 #do
     ano = __annony__()
-    ano[](Matrix)
+    ano[](Matrices)
 #end
 
 _loc compiledMatrix = dd
 
-Matrix:sort(worldView, compiledMatrix)
+Matrices:sort(worldView, compiledMatrix)
