@@ -1,3 +1,4 @@
+// memory allocations
 readfile Matrix:matrix "matrix"
 // if you open the matrix file then you gonna see 7 sections which are called "collections"
 
