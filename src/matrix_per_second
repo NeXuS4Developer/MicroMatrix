@@ -4,7 +4,7 @@ readfile memory_alloc "memory_alloc"
 _loc fps = fps.get()
 _loc fpsMatrix = convert(fps #into Matrix)
 
-_loc vhs calculateMatrix(calculatedMatrices:matrix, )
+_loc vhs calculateMatrix(calculatedMatrices:matrix)
 #do
     fps = calculatedMatrices
     fpsMatrix = fps
