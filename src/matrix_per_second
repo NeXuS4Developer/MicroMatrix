@@ -12,13 +12,13 @@ _loc vhs calculateMatrix(calculatedMatrices:matrix)
     return fpsMatrix
 #end
 
-calculateMatrix(memory_alloc["compileMatrix"])
+calculateMatrix(memory_alloc["compiledMatrix"])
 
 if fpsMatrix == 0
 #do
-        system.GraphicsProgram:StopRender()
-    #else
         system.WaitSeconds(15)
+    #welse
+        system.GraphicsProgram:StopRender()
 
         if fpsMatrix >= 1
         #do
