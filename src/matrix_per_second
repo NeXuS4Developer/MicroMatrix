@@ -1,0 +1,27 @@
+// matrix per second (mps) is based on fps (frames per second) but better and more tweaked
+readfile memory_alloc "memory_alloc"
+
+_loc fps = fps.get()
+_loc fpsMatrix = convert(fps #into Matrix)
+
+_loc vhs calculateMatrix(calculatedMatrices:matrix)
+#do
+    fps = calculatedMatrices
+    fpsMatrix = fps
+
+    return fpsMatrix
+#end
+
+calculateMatrix(memory_alloc["compiledMatrix"])
+
+if fpsMatrix == 0
+#do
+        system.WaitSeconds(15)
+    #welse
+        system.GraphicsProgram:StopRender()
+
+        if fpsMatrix >= 1
+        #do
+            LP_keepProgramAlive()
+        #end
+#end
